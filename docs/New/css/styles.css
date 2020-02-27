@@ -1,0 +1,460 @@
+:root {
+  --windows: #126DA5;
+}
+
+input {
+  position: absolute;
+  left: -100vw;
+}
+
+@font-face {
+  font-family: segoe;
+  src: url(fonts/Segoe\ UI.woff);
+}
+
+@font-face {
+  font-family: tahoma;
+  src: url(fonts/Tahoma.ttf);
+}
+
+
+body {
+  background-color: var(--windows);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+}
+
+main>section {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: var(--windows);
+}
+
+main>section>div {
+  height: 60%;
+  width: 40%;
+}
+
+main>section div div {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+main>section div div p {
+  margin-top: 1.5em;
+}
+
+
+main>section h1 {
+  font-size: 4.5em;
+}
+
+main>section p {
+  font-weight: 10;
+  color: rgba(255, 255, 255, 0.823);
+  /* font-size: 4.5em; */
+}
+
+main>section:last-of-type div div>label {
+  height: 150px;
+  width: 150px;
+  margin: 1.7em 2em 2em 0;
+  background-image: url(../img/qrcode.png);
+  background-position: center;
+  background-size: 150px 150px;
+  background-color: #fff;
+}
+
+main>section:last-of-type div div>label:hover {
+  cursor: pointer;
+}
+
+main>section:last-of-type div div div {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background-image: url(../img/loading.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+main>section div div input:checked~div {
+  cursor: wait;
+  display: flex;
+  animation: increaseLoading 4s;
+  animation-fill-mode: forwards;
+}
+
+main>section div div input:checked~div article {
+  cursor: wait;
+  animation-delay: 5s;
+  animation: error 5s steps(9);
+  animation-fill-mode: forwards;
+}
+
+article {
+  position: absolute;
+  font-family: tahoma;
+  background-color: #D8D4CB;
+  border-left: 1px solid white;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 1px solid #fff;
+  height: 30%;
+}
+
+article label:first-of-type {
+  display: block;
+  margin: 0.2em;
+  font-weight: 100;
+  padding: 0.2em;
+  background-image: linear-gradient(to right, #3B66B4, #30BBEA);
+}
+
+article label:first-of-type:after {
+  content: "X";
+  background-color: #D8D4CB;
+  float: right;
+  padding: 0.2em;
+  color: black;
+  border: 1px solid black;
+  height: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main article>p {
+  color: black;
+  padding: 2em;
+}
+
+main article a {
+  border: 1px solid black;
+  margin: 2em;
+  padding: 1em;
+}
+
+
+/* ---------------------Incremental error messages----------------------- */
+#error1:checked~article:nth-of-type(2) {
+  margin: 1em;
+  z-index: 2;
+}
+
+#error2:checked~article:first-of-type {
+  margin: 5em;
+  z-index: 3;
+}
+
+/* --------------Desktop Loading--------------- */
+#desktop {
+  display: none;
+}
+
+#desktop:target~section {
+  display: none;
+}
+
+#desktop:target {
+  display: block;
+}
+
+main section:first-of-type svg {
+  max-height: 20vh;
+  grid-row: 2;
+}
+
+main section:first-of-type:hover svg>g path:last-of-type {
+  animation: hangLogo 1s cubic-bezier(1, .14, .83, .67);
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+main section:first-of-type svg~span {
+  justify-self: center;
+  grid-row: 3;
+  width: 150px;
+  height: 10px;
+  border: 2px solid #b2b2b2;
+  border-radius: 7px;
+  margin: 0 auto;
+  padding: 2px 1px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+main section:first-of-type svg~span div {
+  width: 9px;
+  height: 100%;
+  background: linear-gradient(to bottom, #2838c7 0%, #5979ef 17%, #869ef3 32%, #869ef3 45%, #5979ef 59%, #2838c7 100%);
+  display: inline-block;
+  margin-right: 2px;
+  animation: loadingBar 2s infinite;
+  animation-timing-function: linear;
+}
+
+main section:first-of-type>div:first-of-type {
+  cursor: none;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  animation: disappearLoading 1ms;
+  animation-fill-mode: forwards;
+  /* animation-delay: 8s; */
+}
+
+
+
+/* ------------------Desktop------------------- */
+#desktop:target>div:nth-of-type(2) {
+  cursor: url("../img/cursor.png"), auto;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 1fr;
+  /* grid-template-areas:
+    "icon icon icon icon icon icon icon icon"
+    "icon icon icon icon icon icon icon icon"
+    "icon icon icon icon icon icon icon icon"
+    "icon icon icon icon icon icon icon icon"
+    "icon icon icon icon icon icon icon icon"
+    "icon icon icon icon icon icon icon icon"
+    "icon icon icon icon icon icon icon icon"
+    "icon icon icon icon icon icon icon icon"
+    "taskbar"
+  ; */
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/windowsxp.jpg);
+  background-size: 100vw 100vh;
+  background-position: center;
+}
+
+#desktop>div:nth-of-type(2)>label img {
+  height: 80px;
+  width: 80px;
+  margin: 1em;
+}
+
+#desktop>div:nth-of-type(2) label {
+  cursor: url("../img/cursor.png"), auto;
+}
+
+#desktop>div:nth-of-type(2)>label:nth-of-type(2) {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+#desktop>div:nth-of-type(2)>label:nth-of-type(3) {
+  grid-row: 3;
+}
+
+#desktop article {
+  display: none;
+}
+
+#ie:checked~div:nth-of-type(2) {
+  animation: hue-rotate 8s infinite, moveMountains 8s steps(1) infinite;
+}
+
+#ie:checked~div:nth-of-type(2)>article {
+  display: block;
+  animation: shake 2000ms steps(3) infinite, delayLoad 2s steps(5) forwards;
+}
+
+#webpage:checked~article:nth-of-type(2) {}
+
+.taskbar {
+  background: linear-gradient(to bottom, #2838c7 0%, #5979ef 17%, #869ef3 32%, #869ef3 45%, #5979ef 59%, #2838c7 100%);
+  height: 100%;
+  grid-row: 9;
+  grid-column: 1 / -1;
+}
+
+.taskbar~div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  grid-column: 1;
+  grid-row: 9;
+  background: linear-gradient(to bottom, #2838c7 0%, #5979ef 17%, #869ef3 32%, #869ef3 45%, #5979ef 59%, #2838c7 100%);
+  filter: hue-rotate(200deg);
+  border-radius: 0 99px 99px 0;
+  box-shadow: 1px 0px 4px 0px rgb(61, 61, 61);
+  height: 100%;
+  width: 180px;
+}
+
+
+
+.taskbar~div label {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.taskbar~div h2 {
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 1px 1px 2px black;
+}
+
+.taskbar~div img {
+  filter: hue-rotate(160deg);
+  margin: 0.5em;
+  height: 50px;
+  width: 50px;
+}
+
+.taskbar~div:last-of-type {
+  background-color: #D3E5FA;
+  position: absolute;
+  bottom: 70px;
+  display: grid;
+  height: 400px;
+  width: 300px;
+  grid-template-columns: auto;
+  grid-template-rows: 15% 70% 15%;
+}
+
+.taskbar~div:last-of-type div {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(#418CE8, #408BE7)
+}
+
+.taskbar~div:last-of-type div:nth-of-type(2) {
+  background-color: white;
+  background-image: none;
+}
+
+@keyframes increaseLoading {
+  0% {
+    background-repeat: no-repeat;
+  }
+
+  100% {
+    background-repeat: repeat;
+  }
+}
+
+@keyframes error {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 30%;
+  }
+}
+
+@keyframes hangLogo {
+  from {
+    d: path("M62.35,23.4c3.84,2.58,8.1,4.64,17,1L75,39.46c-8.86,3.67-13.12,1.59-17-1Z")
+  }
+
+  to {
+    d: path("M71,32.07c.19,4.62,1,9.28,9.24,14.26L65.5,51.72c-8.19-5-9-9.64-9.2-14.27Z")
+  }
+}
+
+@keyframes loadingBar {
+  0% {
+    transform: translate(-30px);
+  }
+
+  100% {
+    transform: translate(150px);
+  }
+}
+
+@keyframes disappearLoading {
+  0% {
+    /* display: grid; */
+    visibility: visible;
+  }
+
+  100% {
+    /* display: block; */
+    visibility: hidden;
+    height: 0;
+  }
+}
+
+@keyframes hue-rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    right: 200px;
+    top: 100px;
+  }
+
+  50% {
+    top: 200px;
+  }
+
+  100% {
+    top: 0;
+    right: 500px;
+  }
+}
+
+@keyframes delayLoad {
+  from {
+    height: 0;
+    /* visibility: hidden; */
+  }
+
+  to {
+    height: 25%;
+    /* visibility: visible; */
+  }
+}
+
+@keyframes moveMountains {
+  0% {
+    bottom: 0;
+  }
+
+  10% {
+    bottom: -100px;
+  }
+
+  20% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
