@@ -1,64 +1,101 @@
-# CSS to the Rescue @cmda-minor-web 19-20
 
-_This course is in English_
+## Table of contents 🗃
+- [Table of contents 🗃](#table-of-contents---)
+- [Live demo](#live-demo)
+- [To Do and features 📌](#to-do-and-features---)
+- [Description 📝](#description---)
+- [My assignment](#my-assignment)
+- [My contexts](#my-contexts)
+- [Two restrictions I picked](#two-restrictions-i-picked)
+- [The *Selector First* CSS Methodology](#the--selector-first--css-methodology)
+- [My findings](#my-findings)
+- [What did not work (or make it to the end product)](#what-did-not-work--or-make-it-to-the-end-product-)
+- [Sources 📚](#sources---)
+  * [Credits](#credits)
+- [Licence 🔓](#licence---)
 
-In this three week course you are going to create an innovative, experimantal, yet pleasurable user experience by using CSS and SVG. No Javascrpt allowed.
+## Live demo
+[Direct link](https://kylebot0.github.io/css-to-the-rescue/docs)
+```
+https://kylebot0.github.io/css-to-the-rescue/docs
+```
 
-## Learning goals
-- _You understand the broader scope of CSS: You can show that CSS can be used for more than just styling web pages._
-- _You understand the progressive enhancement parts of CSS: You can show that you can use the cascade, inheritance and specificity in your project_
-- _You understand the interactive parts of CSS: Is the UX fully enhanced within in given CSS scope?_
-- _You have been experimenting: Have the learning goals been stretched?_
+## To Do and features 📌
+Things to do in this project:
 
-[Rubric](https://docs.google.com/spreadsheets/d/1Xv48MSiACNmnM6nXpGGUb8mJDC459uSaxJszO_zLEp8/edit?usp=sharing)
-
-## Programm
-
-### Week 1 - 👁 C what you did there
-
-[See all the details of week 1 here](week1/).
-
-Goals of this week: 
-
-- Be inspired
-- Discuss hot CSS topics.
-- Get going!
-
-<!-- [Opdrachten](https://drive.google.com/open?id=1OVhWQNaCgSluYviTKKWcApkyPd23xow1PiExb8GYANM) -->
-
-<!-- [Slides](https://drive.google.com/open?id=1Rjl9xqXoKniQSRJPdkU1O5YwWC33SJK8KiV0a-H_xZU) -->
-
-### Week 2 - Create Stuff, 🙃 Smile 
-
-This week’s goals: Moar inspiration, create stuff, break stuff, and learn from each other.
-
-<!-- [Opdrachten](https://drive.google.com/open?id=1GMDTdW3LycAYpZSFI6gk_lrKrx8-zLWrNh69aaVEH5Y) -->
-
-<!-- [Slides](https://drive.google.com/open?id=1IqQeu1m0dQiSC_KCvrn8eencAgtYe7X6qT-gm0n9Bmc) -->
-
-### Week 3 - 🎪 Show time
-
-Goals: Blow us away.
-
-<!-- [Opdrachten](https://drive.google.com/open?id=13pKQu72pshaEzKw9q5JHLa-aop85nMP6nDCdqioWjoQ) -->
-
-<!-- [Slides](https://drive.google.com/open?id=1BSzGYNLMgtHD4HRnK7f0DgyTv4Pg3xsQwD_eYNo7v0Y) -->
+- [ ] Finish a couple links
 
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+Features:
 
-<!-- ☝️ replace this description with a description of your own work -->
+- [x] SVG Manipulation
+- [x] Target selectors
+- [x] Checkbox hack
+- [x] Experimentation
 
-<!-- Add a nice image here at the end of the week, showing off your shiny frontend 📸 -->
+## Description 📝
+This project was made solely with html and css. My idea was re-creating a windows experience. Because windows often has many errors i decided it would be funny to to recreate it. I did that with first starting on a windows 10 screen, and the going back in time to a windows XP desktop. 
 
-<!-- Maybe a table of contents here? 📚 -->
 
-<!-- How about a section that describes how to install this project? 🤓 -->
+## My assignment
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
+- (x) Custom
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+I decided to make my own HTML for this project.
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
+## My contexts
 
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+You have to add one extra contexts to your site
+
+- [x] Custom
+
+## Two restrictions I picked
+You have to work with _at least_ two of these restrictions.
+
+- [x] When SVG meets CSS: Shapes / Masks / SVG
+- [x] Recreate a great experience with only pop-ups
+
+My 'great' experience is working with windows, it can be quite fun but also sometimes not so great. 
+
+## The *Selector First* CSS Methodology
+I have to work with the so called *Selector First* CSS Methodology. This means that I have to use a wide variety of CSS selectors. ID’s are only allowed to trigger the `:target` selector. If I really need them, I am allowed to use a few classes. In order to differentiate between. I'm also allowed to use ID's to make target selectors
+
+## My findings
+This is a list of things i tried that worked, or did not work but did try.
+
+* SVG animation
+* :root
+* All the selectors (+ ~ > etc.)
+* :last-of-type
+* :first-of-type
+* :nth-of-type(4n-7)
+* Checkbox hack
+* ::after
+* ::before
+* :target
+* huerotate()
+* :grid-template-areas
+* @keyframes
+* @keyframes d:path()
+* Different notations of CSS
+* Inheritance
+
+## What did not work (or make it to the end product)
+This list contains most of the stuff that didn't work or i just didn't put in the end product.
+
+* The whole docs/old folder
+* 3d effect on a wall with text moving in
+* Multiple checkbox linking
+* Svg to svg animation on hover
+* 
+
+## Sources 📚
+Sources i used throughout the project.
+
+  * None
+### Credits
+
+  * Thanks to Vitaly for helping me come up with great ideas
+
+## Licence 🔓
+MIT © [Kyle Bot](https://github.com/kylebot0)
