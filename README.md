@@ -1,3 +1,8 @@
+# Windows shut down
+This project was made solely with html and css. My idea was re-creating a windows experience. 
+
+![preview](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bsodwindows10.png/1200px-Bsodwindows10.png)
+> Windows error screen
 
 ## Table of contents 🗃
 - [Table of contents 🗃](#table-of-contents---)
