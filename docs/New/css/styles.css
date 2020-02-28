@@ -220,7 +220,7 @@ main section:first-of-type>div:first-of-type {
   background-color: black;
   animation: disappearLoading 1ms;
   animation-fill-mode: forwards;
-  /* animation-delay: 8s; */
+  animation-delay: 8s;
 }
 
 
