@@ -20,9 +20,9 @@ This project was made solely with html and css. My idea was re-creating a window
 - [Licence 🔓](#licence---)
 
 ## Live demo
-[Direct link](https://kylebot0.github.io/css-to-the-rescue/docs)
+[Direct link](https://kylebot0.github.io/css-to-the-rescue-1920/docs/New/index.html)
 ```
-https://kylebot0.github.io/css-to-the-rescue/docs
+https://kylebot0.github.io/css-to-the-rescue-1920/docs/New/index.html
 ```
 
 ## To Do and features 📌
